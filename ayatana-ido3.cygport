@@ -1,0 +1,29 @@
+inherit gnome2
+
+NAME="ayatana-ido3"
+VERSION=0.4.2
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Ayatana Indicator Display Objects library"
+DESCRIPTION="Application Indicators are a GNOME implementation of the
+StatusNotifierItem Specification (SNI) that was originally submitted to
+freedesktop.org by KDE. The Ayatana Indicator project intends to become
+the new upstream for application indicators and associated projects with a
+focus on making Ayatana Indicators a desktop agnostic technology."
+HOMEPAGE="https://ayatanaindicators.github.io/"
+SRC_URI="https://github.com/AyatanaIndicators/ayatana-ido/archive/${VERSION}/ayatana-ido-${VERSION}.tar.gz"
+SRC_DIR="ayatana-ido-${VERSION}"
+
+PKG_NAMES="libayatana-ido3_0.4_0 libayatana-ido3_0.4-devel
+	   girepository-AyatanaIdo3_0.4 vala-AyatanaIdo3_0.4"
+libayatana_ido3_0_4_0_CONTENTS="
+	usr/bin/cygayatana-ido3-0.4-0.dll
+	usr/share/doc/${NAME}
+"
+libayatana_ido3_0_4_devel_CONTENTS="
+	usr/include/libayatana-ido3-0.4/
+	usr/lib/libayatana-ido3-0.4.dll.a
+	usr/lib/pkgconfig/libayatana-ido3-0.4.pc
+"
+girepository_AyatanaIdo3_0_4_CONTENTS="usr/*/gir*-1.0/AyatanaIdo3-0.4.*"
+vala_AyatanaIdo3_0_4_CONTENTS="usr/share/vala/vapi/AyatanaIdo3-0.4.*"
